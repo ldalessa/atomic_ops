@@ -32,7 +32,7 @@ cmake_minimum_required(VERSION 3.17)
 project(ATOMIC_OPS CXX)
 
 add_library(lib_atomic_ops INTERFACE)
-target_include_directories(lib_atomic_ops INTERFACE $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}>)
+target_include_directories(lib_atomic_ops INTERFACE $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/include>)
 target_compile_features(lib_atomic_ops INTERFACE cxx_std_20)
 
 add_library(atomic_ops::atomic_ops ALIAS lib_atomic_ops)
